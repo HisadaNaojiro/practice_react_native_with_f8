@@ -95,4 +95,9 @@ android/app/src/main/java/com/propertyfinderに以下2つを開いてくださ�
 - MainActivity.java
 - MainApplication.java
 
+MainApplicationはReactNativeHostを設定し、ReactNativeHostはReactInstanceManagerを作成します。 
+インスタンスマネージャは、JavaScriptとネイティブAndroid間の通信を処理します。
 
+MainActivityはReactActivityを拡張し、起動時にReactRootViewを作成します。 
+ReactRootViewはインスタンスマネージャを使用してJavaScriptアプリケーションを開始します。 
+また、Appコンポーネントをレンダリングして、アクティビティのコンテンツビューを設定します。
