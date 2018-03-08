@@ -12,6 +12,7 @@ import {
   View
 } from 'react-native';
 import {StackNavigator} from 'react-navigation';
+import SearchPage from './SearchPage';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -22,27 +23,8 @@ const instructions = Platform.select({
 
 type Props = {};
 
-class SearchPage extends Component<{}> {
-  static navigationOptions = {
-    title: 'Property Finder',
-  };
-
-  render() {
-    return <Text style={styles.description}>Search for houses to buy!</Text>;
-  }
-}
-
 const App = StackNavigator({
   Home: {screen: SearchPage},
-});
-
-const styles = StyleSheet.create({
-  description: {
-    fontSize: 18,
-    textAlign: 'center',
-    color: '#656565',
-    marginTop: 65
-  },
 });
 
 export default App;
